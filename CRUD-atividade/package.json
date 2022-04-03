@@ -1,0 +1,18 @@
+{
+  "name": "crud-atividade",
+  "version": "1.0.0",
+  "description": "CRUD criado para atividade de PW3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start"
+  },
+  "author": "GUSTAVO FONTANA VIEIRA",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.17.0"
+  }
+}

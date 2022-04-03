@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "5b1f8255-8f38-45e3-ba32-fd5dc1314caf",
+		"name": "API-ATIVIDADE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Especialidade",
+			"item": [
+				{
+					"name": "Cadastrar Especialidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_especialidade\": \"Ortopedista\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/especialidade/cadastrarEspecialidade",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"especialidade",
+								"cadastrarEspecialidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Especialidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3\",\r\n    \"nome_especialidade\": \"Neuro-cirurgião\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/especialidade/alterarEspecialidade",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"especialidade",
+								"alterarEspecialidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Especialidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/especialidade/excluirEspecialidade/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"especialidade",
+								"excluirEspecialidade",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Especialidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/especialidade/listarEspecialidades",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"especialidade",
+								"listarEspecialidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Especialidade por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/especialidade/listarEspecialidade/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"especialidade",
+								"listarEspecialidade",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Médico",
+			"item": [
+				{
+					"name": "Cadastrar Médico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome_medico\": \"Teste4\", \r\n   \"email_medico\": \"teste4@gmail.com\",\r\n   \"telefone_medico\": \"1234666\", \r\n   \"celular_medico\": \"6666666666666\", \r\n   \"tblEspecialidadeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/medico/cadastrarMedico",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"medico",
+								"cadastrarMedico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Médico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n   \"nome_medico\": \"teste3\", \r\n   \"email_medico\": \"teste3@gmail.com\",\r\n   \"telefone_medico\": \"1234666\", \r\n   \"celular_medico\": \"6666666666666\", \r\n   \"tblEspecialidadeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/medico/alterarMedico",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"medico",
+								"alterarMedico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar de Médicos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome_medico\": \"Max Willian\", \r\n   \"email_medico\": \"maxstudy@gmail.com\",\r\n   \"telefone_medico\": \"1234567\", \r\n   \"celular_medico\": \"1111112222\", \r\n   \"tblEspecialidadeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/medico/listarMedicos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"medico",
+								"listarMedicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar de Médico por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome_medico\": \"Max Willian\", \r\n   \"email_medico\": \"maxstudy@gmail.com\",\r\n   \"telefone_medico\": \"1234567\", \r\n   \"celular_medico\": \"1111112222\", \r\n   \"tblEspecialidadeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/medico/listarMedico/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"medico",
+								"listarMedico",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Médico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome_medico\": \"Max Willian\", \r\n   \"email_medico\": \"maxstudy@gmail.com\",\r\n   \"telefone_medico\": \"1234567\", \r\n   \"celular_medico\": \"1111112222\", \r\n   \"tblEspecialidadeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/medico/excluirMedico/6",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"medico",
+								"excluirMedico",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
